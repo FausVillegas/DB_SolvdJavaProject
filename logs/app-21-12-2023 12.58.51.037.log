@@ -1,0 +1,11 @@
+2023-12-21 12:58:52,543 INFO j.u.ArrayList$ArrayListSpliterator [main] User{firstName='Fausto', lastName='Villegas', age=19}
+2023-12-21 12:58:52,549 INFO j.u.ArrayList$ArrayListSpliterator [main] User{firstName='Manuel', lastName='Raimondi', age=23}
+2023-12-21 12:58:52,550 INFO j.u.ArrayList$ArrayListSpliterator [main] User{firstName='Bruno', lastName='Rodriguez', age=15}
+2023-12-21 12:58:52,550 INFO j.u.ArrayList$ArrayListSpliterator [main] User{firstName='Matias', lastName='Lopez', age=35}
+2023-12-21 12:58:52,551 INFO j.u.ArrayList$ArrayListSpliterator [main] User{firstName='Matias', lastName='Lopez', age=35}
+2023-12-21 12:58:52,557 INFO j.u.ArrayList$ArrayListSpliterator [main] ContactInformation{email='faustovillegas@gmail.com', phoneNumber=11111}
+2023-12-21 12:58:52,558 INFO j.u.ArrayList$ArrayListSpliterator [main] ContactInformation{email='manuelraimondi@gmail.com', phoneNumber=222222}
+2023-12-21 12:58:52,567 INFO j.u.ArrayList$ArrayListSpliterator [main] OperatingSystem{name='Windows 10'}
+2023-12-21 12:58:52,567 INFO j.u.ArrayList$ArrayListSpliterator [main] OperatingSystem{name='Android 12'}
+2023-12-21 12:58:52,567 INFO j.u.ArrayList$ArrayListSpliterator [main] OperatingSystem{name='iOS 17'}
+2023-12-21 12:58:52,568 INFO j.u.ArrayList$ArrayListSpliterator [main] OperatingSystem{name='Android 13'}

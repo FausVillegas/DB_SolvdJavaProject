@@ -5,6 +5,7 @@ import main.java.com.solvd.database.dao.IUserDao;
 import main.java.com.solvd.database.dao.jdbc.ContactInformationDAO;
 import main.java.com.solvd.database.dao.jdbc.OperatingSystemDAO;
 import main.java.com.solvd.database.dao.jdbc.UserDAO;
+import main.java.com.solvd.database.services.PrintService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -27,14 +28,9 @@ public class Main {
         return properties.getProperty("framework");
     }
     public static void main(String[] args) {
-        IUserDao userDAO = DBFactory.getUserDAO(getFramework());
-        List<User> users = userDAO.getEntities();
-        users.stream().forEach(LOGGER::error);
-
-        ContactInformationDAO contactInformationDAO = new ContactInformationDAO();
-        contactInformationDAO.getEntities().stream().forEach(LOGGER::error);
-
-        OperatingSystemDAO operatingSystemDAO = new OperatingSystemDAO();
-        operatingSystemDAO.getEntities().stream().forEach(LOGGER::error);
+        PrintService printService = new PrintService();
+        printService.usersList();
+        printService.contactInformationList();
+        printService.operatingSystemsList();
     }
 }
