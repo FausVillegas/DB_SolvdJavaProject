@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="main.java.com.solvd.database.dao.IOperatingSystemsDao">
+    <resultMap id="result" autoMapping="false" type="main.java.com.solvd.database.model.OperatingSystem">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+    </resultMap>
+    <select id="getEntityById" parameterType="Integer" resultMap="result">
+        select * from operating_systems where id = #{id}
+    </select>
+    <insert id="insertEntity" parameterType="main.java.com.solvd.database.model.OperatingSystem" useGeneratedKeys="true" keyProperty="id"
+            timeout="20">
+        insert into operating_systems (`name`) value (#{operatingSystem.name})
+    </insert>
+    <update id="updateEntity" parameterType="main.java.com.solvd.database.model.OperatingSystem">
+        update operating_systems set name=#{operatingSystem.name} where id=#{operatingSystem.id}
+    </update>
+    <delete id="removeEntity">
+        delete from operating_systems where id=#{id}
+    </delete>
+    <select id="getEntities" resultMap="result">select * from operating_systems</select>
+</mapper>

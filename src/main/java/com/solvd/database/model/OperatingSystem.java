@@ -2,6 +2,7 @@ package main.java.com.solvd.database.model;
 
 public class OperatingSystem {
     String name;
+    int id;
 
     public String getName() {
         return name;
@@ -11,10 +12,19 @@ public class OperatingSystem {
         this.name = name;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "OperatingSystem{" +
                 "name='" + name + '\'' +
+                ", id=" + id +
                 '}';
     }
 }

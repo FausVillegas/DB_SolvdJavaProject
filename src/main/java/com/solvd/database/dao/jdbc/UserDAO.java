@@ -1,6 +1,6 @@
 package main.java.com.solvd.database.dao.jdbc;
 
-import com.solvd.database.model.User;
+import main.java.com.solvd.database.model.User;
 import main.java.com.solvd.database.ConnectionPool;
 import main.java.com.solvd.database.dao.IBaseDao;
 import main.java.com.solvd.database.dao.IUserDao;
@@ -61,7 +61,7 @@ public class UserDAO implements IUserDao {
     }
 
     @Override
-    public void updateEntity(User o, int id) {
+    public void updateEntity(User o) {
         Connection connection = connectionPool.retrieve();
         PreparedStatement preparedStatement = null;
         try {
@@ -69,7 +69,7 @@ public class UserDAO implements IUserDao {
             preparedStatement.setString(1, o.getFirstName());
             preparedStatement.setString(2, o.getLastName());
             preparedStatement.setInt(3, o.getAge());
-            preparedStatement.setInt(4, id);
+            preparedStatement.setInt(4, o.getId());
             preparedStatement.execute();
         } catch (SQLException e){
             LOGGER.error(e);

@@ -1,18 +1,19 @@
-package com.solvd.database.model;
+package main.java.com.solvd.database.model;
 
 import main.java.com.solvd.database.model.ContactInformation;
 
 public class User {
-    private String firstName;
+    private String name;
     private String lastName;
     private int age;
+    private int id;
 
     public String getFirstName() {
-        return firstName;
+        return name;
     }
 
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
+        this.name = firstName;
     }
 
     public String getLastName() {
@@ -31,12 +32,21 @@ public class User {
         this.age = age;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "User{" +
-                "firstName='" + firstName + '\'' +
+                "firstName='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", age=" + age +
+                ", id=" + id +
                 '}';
     }
 }

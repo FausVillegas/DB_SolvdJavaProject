@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="main.java.com.solvd.database.dao.IContactInformationDao">
+    <resultMap id="result" autoMapping="false" type="main.java.com.solvd.database.model.ContactInformation">
+        <result property="id" column="id"/>
+        <result property="userId" column="users_id"/>
+        <result property="email" column="email"/>
+        <result property="phoneNumber" column="phone_number"/>
+    </resultMap>
+    <select id="getEntityById" parameterType="Integer" resultMap="result">
+        select * from contact_information where id = #{id}
+    </select>
+    <select id="getEntityByUserId" parameterType="Integer" resultMap="result">
+        select * from contact_information where users_id = #{userId}
+    </select>
+    <insert id="insertEntity" parameterType="main.java.com.solvd.database.model.ContactInformation" useGeneratedKeys="true" keyProperty="id"
+            timeout="20">
+        insert into contact_information (`users_id`,`email`,`phone_number`) value (#{contactInformation.userId},#{contactInformation.email},#{contactInformation.phoneNumber})
+    </insert>
+    <update id="updateEntity" parameterType="main.java.com.solvd.database.model.ContactInformation">
+        update contact_information set usersId=#{contactInformation.userId},email=#{contactInformation.email},phone_number=#{contactInformation.phoneNumber} where id=#{contactInformation.id}
+    </update>
+    <delete id="removeEntity">
+        delete from contact_information where id=#{id}
+    </delete>
+    <select id="getEntities" resultMap="result">select * from contact_information</select>
+</mapper>

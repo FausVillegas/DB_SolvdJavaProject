@@ -1,0 +1,25 @@
+2023-12-27 02:46:50,270 DEBUG o.a.i.l.LogFactory [main] Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2023-12-27 02:46:50,308 DEBUG o.a.i.d.p.PooledDataSource [main] PooledDataSource forcefully closed/removed all connections.
+2023-12-27 02:46:50,310 DEBUG o.a.i.d.p.PooledDataSource [main] PooledDataSource forcefully closed/removed all connections.
+2023-12-27 02:46:50,311 DEBUG o.a.i.d.p.PooledDataSource [main] PooledDataSource forcefully closed/removed all connections.
+2023-12-27 02:46:50,313 DEBUG o.a.i.d.p.PooledDataSource [main] PooledDataSource forcefully closed/removed all connections.
+2023-12-27 02:46:50,612 DEBUG o.a.i.t.j.JdbcTransaction [main] Opening JDBC Connection
+2023-12-27 02:46:51,789 DEBUG o.a.i.d.p.PooledDataSource [main] Created connection 539240764.
+2023-12-27 02:46:51,800 DEBUG o.a.i.l.j.BaseJdbcLogger [main] ==>  Preparing: select * from users
+2023-12-27 02:46:51,877 DEBUG o.a.i.l.j.BaseJdbcLogger [main] ==> Parameters: 
+2023-12-27 02:46:51,984 DEBUG o.a.i.l.j.BaseJdbcLogger [main] <==      Total: 4
+2023-12-27 02:46:52,029 INFO j.u.ArrayList [main] User{firstName='Fausto', lastName='Villegas', age=19, id=5}
+2023-12-27 02:46:52,031 INFO j.u.ArrayList [main] User{firstName='Manuel', lastName='Raimondi', age=23, id=6}
+2023-12-27 02:46:52,032 INFO j.u.ArrayList [main] User{firstName='Bruno', lastName='Rodriguez', age=15, id=7}
+2023-12-27 02:46:52,034 INFO j.u.ArrayList [main] User{firstName='Matias', lastName='Lopez', age=35, id=8}
+2023-12-27 02:46:52,041 DEBUG o.a.i.l.j.BaseJdbcLogger [main] ==>  Preparing: delete from users where id=?
+2023-12-27 02:46:52,049 DEBUG o.a.i.l.j.BaseJdbcLogger [main] ==> Parameters: 9(Integer)
+2023-12-27 02:46:52,059 DEBUG o.a.i.l.j.BaseJdbcLogger [main] <==    Updates: 0
+2023-12-27 02:46:52,061 DEBUG o.a.i.l.j.BaseJdbcLogger [main] ==>  Preparing: select * from users
+2023-12-27 02:46:52,063 DEBUG o.a.i.l.j.BaseJdbcLogger [main] ==> Parameters: 
+2023-12-27 02:46:52,068 DEBUG o.a.i.l.j.BaseJdbcLogger [main] <==      Total: 4
+2023-12-27 02:46:52,070 INFO j.u.ArrayList [main] User{firstName='Fausto', lastName='Villegas', age=19, id=5}
+2023-12-27 02:46:52,072 INFO j.u.ArrayList [main] User{firstName='Manuel', lastName='Raimondi', age=23, id=6}
+2023-12-27 02:46:52,073 INFO j.u.ArrayList [main] User{firstName='Bruno', lastName='Rodriguez', age=15, id=7}
+2023-12-27 02:46:52,075 INFO j.u.ArrayList [main] User{firstName='Matias', lastName='Lopez', age=35, id=8}
+2023-12-27 02:46:52,077 DEBUG o.a.i.l.j.BaseJdbcLogger [main] ==>  Preparing: insert into users (`name`,`last_name`,`age`) value (?,?,?)

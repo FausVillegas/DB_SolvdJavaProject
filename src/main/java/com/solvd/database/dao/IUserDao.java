@@ -1,12 +1,13 @@
 package main.java.com.solvd.database.dao;
 
 import java.util.List;
-import com.solvd.database.model.User;
+import main.java.com.solvd.database.model.User;
+import org.apache.ibatis.annotations.Param;
 
 public interface IUserDao extends IBaseDao<User>{
-    User getEntityById(int id);
-    void insertEntity(User t);
-    void updateEntity(User t, int id);
-    void removeEntity(int id);
+    User getEntityById(@Param("id") int id);
+    void insertEntity(@Param("user")User user);
+    void updateEntity(@Param("user")User user);
+    void removeEntity(@Param("id")int id);
     List<User> getEntities();
 }

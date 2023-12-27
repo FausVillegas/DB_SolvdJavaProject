@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="main.java.com.solvd.database.dao.IUserDao">
+    <resultMap id="result" autoMapping="false" type="main.java.com.solvd.database.model.User">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="lastName" column="last_name"/>
+        <result property="age" column="age"/>
+    </resultMap>
+    <select id="getEntityById" parameterType="Integer" resultMap="result">
+        select * from users where id = #{id}
+    </select>
+    <insert id="insertEntity" parameterType="main.java.com.solvd.database.model.User" useGeneratedKeys="true" keyProperty="id"
+            timeout="20">
+        insert into users (`name`,`last_name`,`age`) value (#{user.name},#{user.lastName},#{user.age})
+    </insert>
+    <update id="updateEntity" parameterType="main.java.com.solvd.database.model.User">
+        update users set name=#{user.name},last_name=#{user.lastName},age=#{user.age} where id=#{user.id}
+    </update>
+    <delete id="removeEntity">
+        delete from users where id=#{id}
+    </delete>
+    <select id="getEntities" resultMap="result">select * from users</select>
+</mapper>

@@ -4,6 +4,7 @@ public class ContactInformation {
     String email;
     Long phoneNumber;
     int userId;
+    int id;
 
     public String getEmail() {
         return email;
@@ -29,11 +30,21 @@ public class ContactInformation {
         this.userId = userId;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "ContactInformation{" +
                 "email='" + email + '\'' +
                 ", phoneNumber=" + phoneNumber +
+                ", userId=" + userId +
+                ", id=" + id +
                 '}';
     }
 }

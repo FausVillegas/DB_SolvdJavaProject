@@ -1,0 +1,10 @@
+2023-12-27 02:09:35,837 DEBUG o.a.i.l.LogFactory [main] Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2023-12-27 02:09:35,888 DEBUG o.a.i.d.p.PooledDataSource [main] PooledDataSource forcefully closed/removed all connections.
+2023-12-27 02:09:35,891 DEBUG o.a.i.d.p.PooledDataSource [main] PooledDataSource forcefully closed/removed all connections.
+2023-12-27 02:09:35,893 DEBUG o.a.i.d.p.PooledDataSource [main] PooledDataSource forcefully closed/removed all connections.
+2023-12-27 02:09:35,895 DEBUG o.a.i.d.p.PooledDataSource [main] PooledDataSource forcefully closed/removed all connections.
+2023-12-27 02:09:36,217 DEBUG o.a.i.t.j.JdbcTransaction [main] Opening JDBC Connection
+2023-12-27 02:09:37,403 DEBUG o.a.i.d.p.PooledDataSource [main] Created connection 1498016680.
+2023-12-27 02:09:37,412 DEBUG o.a.i.l.j.BaseJdbcLogger [main] ==>  Preparing: select * from users where id = ?
+2023-12-27 02:09:37,497 DEBUG o.a.i.l.j.BaseJdbcLogger [main] ==> Parameters: 5(Integer)
+2023-12-27 02:09:37,585 DEBUG o.a.i.l.j.BaseJdbcLogger [main] <==      Total: 1

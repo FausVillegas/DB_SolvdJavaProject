@@ -1,0 +1,25 @@
+2023-12-27 03:16:02,519 DEBUG o.a.i.l.LogFactory [main] Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2023-12-27 03:16:02,586 DEBUG o.a.i.d.p.PooledDataSource [main] PooledDataSource forcefully closed/removed all connections.
+2023-12-27 03:16:02,590 DEBUG o.a.i.d.p.PooledDataSource [main] PooledDataSource forcefully closed/removed all connections.
+2023-12-27 03:16:02,594 DEBUG o.a.i.d.p.PooledDataSource [main] PooledDataSource forcefully closed/removed all connections.
+2023-12-27 03:16:02,597 DEBUG o.a.i.d.p.PooledDataSource [main] PooledDataSource forcefully closed/removed all connections.
+2023-12-27 03:16:02,839 DEBUG o.a.i.t.j.JdbcTransaction [main] Opening JDBC Connection
+2023-12-27 03:16:03,754 DEBUG o.a.i.d.p.PooledDataSource [main] Created connection 1490985125.
+2023-12-27 03:16:03,763 DEBUG o.a.i.l.j.BaseJdbcLogger [main] ==>  Preparing: select * from operating_systems
+2023-12-27 03:16:03,840 DEBUG o.a.i.l.j.BaseJdbcLogger [main] ==> Parameters: 
+2023-12-27 03:16:03,945 DEBUG o.a.i.l.j.BaseJdbcLogger [main] <==      Total: 4
+2023-12-27 03:16:03,968 INFO j.u.ArrayList [main] OperatingSystem{name='Windows 10', id=16}
+2023-12-27 03:16:03,969 INFO j.u.ArrayList [main] OperatingSystem{name='Android 12', id=17}
+2023-12-27 03:16:03,971 INFO j.u.ArrayList [main] OperatingSystem{name='iOS 17', id=18}
+2023-12-27 03:16:03,973 INFO j.u.ArrayList [main] OperatingSystem{name='Android 13', id=19}
+2023-12-27 03:16:03,981 DEBUG o.a.i.l.j.BaseJdbcLogger [main] ==>  Preparing: insert into operating_systems (`name`) value (?)
+2023-12-27 03:16:03,999 DEBUG o.a.i.l.j.BaseJdbcLogger [main] ==> Parameters: Windows 7(String)
+2023-12-27 03:16:04,025 DEBUG o.a.i.l.j.BaseJdbcLogger [main] <==    Updates: 1
+2023-12-27 03:16:04,033 DEBUG o.a.i.l.j.BaseJdbcLogger [main] ==>  Preparing: select * from operating_systems
+2023-12-27 03:16:04,035 DEBUG o.a.i.l.j.BaseJdbcLogger [main] ==> Parameters: 
+2023-12-27 03:16:04,042 DEBUG o.a.i.l.j.BaseJdbcLogger [main] <==      Total: 5
+2023-12-27 03:16:04,044 INFO j.u.ArrayList [main] OperatingSystem{name='Windows 10', id=16}
+2023-12-27 03:16:04,044 INFO j.u.ArrayList [main] OperatingSystem{name='Android 12', id=17}
+2023-12-27 03:16:04,045 INFO j.u.ArrayList [main] OperatingSystem{name='iOS 17', id=18}
+2023-12-27 03:16:04,045 INFO j.u.ArrayList [main] OperatingSystem{name='Android 13', id=19}
+2023-12-27 03:16:04,046 INFO j.u.ArrayList [main] OperatingSystem{name='Windows 7', id=20}

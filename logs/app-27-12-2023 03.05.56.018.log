@@ -1,0 +1,14 @@
+2023-12-27 03:05:56,848 DEBUG o.a.i.l.LogFactory [main] Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2023-12-27 03:05:56,884 DEBUG o.a.i.d.p.PooledDataSource [main] PooledDataSource forcefully closed/removed all connections.
+2023-12-27 03:05:56,886 DEBUG o.a.i.d.p.PooledDataSource [main] PooledDataSource forcefully closed/removed all connections.
+2023-12-27 03:05:56,889 DEBUG o.a.i.d.p.PooledDataSource [main] PooledDataSource forcefully closed/removed all connections.
+2023-12-27 03:05:56,891 DEBUG o.a.i.d.p.PooledDataSource [main] PooledDataSource forcefully closed/removed all connections.
+2023-12-27 03:05:57,214 DEBUG o.a.i.t.j.JdbcTransaction [main] Opening JDBC Connection
+2023-12-27 03:05:58,359 DEBUG o.a.i.d.p.PooledDataSource [main] Created connection 1846539844.
+2023-12-27 03:05:58,370 DEBUG o.a.i.l.j.BaseJdbcLogger [main] ==>  Preparing: select * from operating_systems
+2023-12-27 03:05:58,456 DEBUG o.a.i.l.j.BaseJdbcLogger [main] ==> Parameters: 
+2023-12-27 03:05:58,570 DEBUG o.a.i.l.j.BaseJdbcLogger [main] <==      Total: 4
+2023-12-27 03:05:58,593 INFO j.u.ArrayList [main] OperatingSystem{name='Windows 10', id=16}
+2023-12-27 03:05:58,594 INFO j.u.ArrayList [main] OperatingSystem{name='Android 12', id=17}
+2023-12-27 03:05:58,596 INFO j.u.ArrayList [main] OperatingSystem{name='iOS 17', id=18}
+2023-12-27 03:05:58,597 INFO j.u.ArrayList [main] OperatingSystem{name='Android 13', id=19}

@@ -1,0 +1,12 @@
+2023-12-27 03:30:15,227 DEBUG o.a.i.l.LogFactory [main] Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2023-12-27 03:30:15,275 DEBUG o.a.i.d.p.PooledDataSource [main] PooledDataSource forcefully closed/removed all connections.
+2023-12-27 03:30:15,278 DEBUG o.a.i.d.p.PooledDataSource [main] PooledDataSource forcefully closed/removed all connections.
+2023-12-27 03:30:15,280 DEBUG o.a.i.d.p.PooledDataSource [main] PooledDataSource forcefully closed/removed all connections.
+2023-12-27 03:30:15,283 DEBUG o.a.i.d.p.PooledDataSource [main] PooledDataSource forcefully closed/removed all connections.
+2023-12-27 03:30:15,700 DEBUG o.a.i.t.j.JdbcTransaction [main] Opening JDBC Connection
+2023-12-27 03:30:17,012 DEBUG o.a.i.d.p.PooledDataSource [main] Created connection 7548983.
+2023-12-27 03:30:17,023 DEBUG o.a.i.l.j.BaseJdbcLogger [main] ==>  Preparing: select * from contact_information
+2023-12-27 03:30:17,101 DEBUG o.a.i.l.j.BaseJdbcLogger [main] ==> Parameters: 
+2023-12-27 03:30:17,205 DEBUG o.a.i.l.j.BaseJdbcLogger [main] <==      Total: 2
+2023-12-27 03:30:17,236 INFO j.u.ArrayList [main] ContactInformation{email='faustovillegas@gmail.com', phoneNumber=11111, userId=0, id=5}
+2023-12-27 03:30:17,237 INFO j.u.ArrayList [main] ContactInformation{email='manuelraimondi@gmail.com', phoneNumber=222222, userId=0, id=6}

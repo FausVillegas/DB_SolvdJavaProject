@@ -1,6 +1,6 @@
 package main.java.com.solvd.database.dao.jdbc;
 
-import com.solvd.database.model.User;
+import main.java.com.solvd.database.model.User;
 import main.java.com.solvd.database.ConnectionPool;
 import main.java.com.solvd.database.dao.IContactInformationDao;
 import main.java.com.solvd.database.model.ContactInformation;
@@ -60,7 +60,7 @@ public class ContactInformationDAO implements IContactInformationDao {
     }
 
     @Override
-    public void updateEntity(ContactInformation o, int id) {
+    public void updateEntity(ContactInformation o) {
         Connection connection = connectionPool.retrieve();
         PreparedStatement preparedStatement = null;
         try {
@@ -68,7 +68,7 @@ public class ContactInformationDAO implements IContactInformationDao {
             preparedStatement.setString(1, o.getEmail());
             preparedStatement.setLong(2, o.getPhoneNumber());
             preparedStatement.setInt(3, o.getUserId());
-            preparedStatement.setInt(4, id);
+            preparedStatement.setInt(4, o.getId());
             preparedStatement.execute();
         } catch (SQLException e){
             LOGGER.error(e);

@@ -1,0 +1,21 @@
+2023-12-27 02:53:56,763 DEBUG o.a.i.l.LogFactory [main] Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2023-12-27 02:53:56,800 DEBUG o.a.i.d.p.PooledDataSource [main] PooledDataSource forcefully closed/removed all connections.
+2023-12-27 02:53:56,803 DEBUG o.a.i.d.p.PooledDataSource [main] PooledDataSource forcefully closed/removed all connections.
+2023-12-27 02:53:56,805 DEBUG o.a.i.d.p.PooledDataSource [main] PooledDataSource forcefully closed/removed all connections.
+2023-12-27 02:53:56,807 DEBUG o.a.i.d.p.PooledDataSource [main] PooledDataSource forcefully closed/removed all connections.
+2023-12-27 02:53:57,063 DEBUG o.a.i.t.j.JdbcTransaction [main] Opening JDBC Connection
+2023-12-27 02:53:58,146 DEBUG o.a.i.d.p.PooledDataSource [main] Created connection 764358458.
+2023-12-27 02:53:58,156 DEBUG o.a.i.l.j.BaseJdbcLogger [main] ==>  Preparing: select * from users
+2023-12-27 02:53:58,225 DEBUG o.a.i.l.j.BaseJdbcLogger [main] ==> Parameters: 
+2023-12-27 02:53:58,326 DEBUG o.a.i.l.j.BaseJdbcLogger [main] <==      Total: 5
+2023-12-27 02:53:58,354 INFO j.u.ArrayList [main] User{firstName='Fausto', lastName='Villegas', age=19, id=5}
+2023-12-27 02:53:58,356 INFO j.u.ArrayList [main] User{firstName='Manuel', lastName='Raimondi', age=23, id=6}
+2023-12-27 02:53:58,358 INFO j.u.ArrayList [main] User{firstName='Bruno', lastName='Rodriguez', age=15, id=7}
+2023-12-27 02:53:58,359 INFO j.u.ArrayList [main] User{firstName='Matias', lastName='Lopez', age=35, id=8}
+2023-12-27 02:53:58,360 INFO j.u.ArrayList [main] User{firstName='Juan', lastName='Lopez', age=65, id=11}
+2023-12-27 02:53:58,368 DEBUG o.a.i.l.j.BaseJdbcLogger [main] ==>  Preparing: update users set name=?,last_name=?,age=? where id=?
+2023-12-27 02:53:58,382 DEBUG o.a.i.l.j.BaseJdbcLogger [main] ==> Parameters: Matias(String), Oliver(String), 20(Integer), 8(Integer)
+2023-12-27 02:53:58,403 DEBUG o.a.i.l.j.BaseJdbcLogger [main] <==    Updates: 1
+2023-12-27 02:53:58,405 DEBUG o.a.i.l.j.BaseJdbcLogger [main] ==>  Preparing: select * from users where id = ?
+2023-12-27 02:53:58,408 DEBUG o.a.i.l.j.BaseJdbcLogger [main] ==> Parameters: 8(Integer)
+2023-12-27 02:53:58,414 DEBUG o.a.i.l.j.BaseJdbcLogger [main] <==      Total: 1

@@ -56,13 +56,13 @@ public class OperatingSystemDAO implements IOperatingSystemsDao {
     }
 
     @Override
-    public void updateEntity(OperatingSystem o, int id) {
+    public void updateEntity(OperatingSystem o) {
         Connection connection = connectionPool.retrieve();
         PreparedStatement preparedStatement = null;
         try {
             preparedStatement = connection.prepareStatement("Update operating_systems set name=? where id=?");
             preparedStatement.setString(1, o.getName());
-            preparedStatement.setInt(2, id);
+            preparedStatement.setInt(2, o.getId());
             preparedStatement.execute();
         } catch (SQLException e){
             LOGGER.error(e);
