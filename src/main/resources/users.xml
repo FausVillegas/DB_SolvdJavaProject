@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="users.xsd">
+    <user id="1">
+        <name>Fausto</name>
+        <lastName>Villegas</lastName>
+        <age>19</age>
+        <contactInformation id="1">
+            <email>faustovillegas2015@gmail.com</email>
+            <phoneNumber>2222222222</phoneNumber>
+        </contactInformation>
+        <phones>
+            <phone id="1">
+                <brand>Samsung</brand>
+                <model>S22</model>
+                <operatingSystem id="1">
+                    <name>Android 13</name>
+                </operatingSystem>
+                <battery id="6">
+                    <capacityMah>5500</capacityMah>
+                </battery>
+            </phone>
+        </phones>
+    </user>
+</users>

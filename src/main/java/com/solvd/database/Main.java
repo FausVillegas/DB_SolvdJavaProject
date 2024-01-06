@@ -11,6 +11,7 @@ import main.java.com.solvd.database.dao.jdbc.ContactInformationDAO;
 import main.java.com.solvd.database.dao.jdbc.OperatingSystemDAO;
 import main.java.com.solvd.database.dao.jdbc.UserDAO;
 import main.java.com.solvd.database.services.PrintService;
+import main.java.com.solvd.database.services.dom.DomParser;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -38,20 +39,24 @@ public class Main {
         return properties.getProperty("framework");
     }
     public static void main(String[] args) {
-        try(InputStream is = Resources.getResourceAsStream("mybatis-config.xml")){
+//        try(InputStream is = Resources.getResourceAsStream("mybatis-config.xml")){
+//
+//            SqlSessionFactory sessionFactory = new SqlSessionFactoryBuilder()
+//                    .build(is);
+//            SqlSession sqlSession = sessionFactory.openSession(true);
+//
+//            IUserDao iUserDao = sqlSession.getMapper(IUserDao.class);
+//
+//            IOperatingSystemsDao iOperatingSystemsDao = sqlSession.getMapper(IOperatingSystemsDao.class);
+//
+//            IContactInformationDao iContactInformationDao = sqlSession.getMapper(IContactInformationDao.class);
+//
+//        }catch (IOException e){
+//            throw new RuntimeException(e);
+//        }
 
-            SqlSessionFactory sessionFactory = new SqlSessionFactoryBuilder()
-                    .build(is);
-            SqlSession sqlSession = sessionFactory.openSession(true);
-
-            IUserDao iUserDao = sqlSession.getMapper(IUserDao.class);
-
-            IOperatingSystemsDao iOperatingSystemsDao = sqlSession.getMapper(IOperatingSystemsDao.class);
-
-            IContactInformationDao iContactInformationDao = sqlSession.getMapper(IContactInformationDao.class);
-
-        }catch (IOException e){
-            throw new RuntimeException(e);
-        }
+        // -------------XML-------------
+        //DOM
+        DomParser.usersXml();
     }
 }
