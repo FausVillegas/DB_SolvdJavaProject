@@ -1,9 +1,12 @@
 package main.java.com.solvd.database.model;
 
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "phone")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Phone {
     @XmlAttribute(name="id")
     private int ID;

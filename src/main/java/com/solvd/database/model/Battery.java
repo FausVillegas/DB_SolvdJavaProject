@@ -1,18 +1,21 @@
 package main.java.com.solvd.database.model;
 
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
 
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Battery {
     @XmlAttribute(name="id")
-    private int ID;
+    private int id;
     private float capacityMah;
 
     public int getId() {
-        return ID;
+        return id;
     }
 
     public void setId(int id) {
-        this.ID = id;
+        this.id = id;
     }
 
     public float getCapacityMah() {
@@ -26,7 +29,7 @@ public class Battery {
     @Override
     public String toString() {
         return "Battery{" +
-                "id=" + ID +
+                "id=" + id +
                 ", capacityMah=" + capacityMah +
                 '}';
     }

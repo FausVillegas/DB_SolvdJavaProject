@@ -1,0 +1,2 @@
+2024-01-09 02:42:04,497 INFO m.j.c.s.d.Main [main] Users{usersList=[
+ User{ID=1, firstName='Fausto', lastName='Villegas', age=19, contactInformation=ContactInformation{email='faustovillegas2015@gmail.com', phoneNumber=2222222222, id=1}, phoneList=[Phone{ID=1, brand='Samsung', model='modelS22', operatingSystem=OperatingSystem{name='Android 13', id=1}, battery=Battery{id=6, capacityMah=5500.0}}], hireDate=Tue May 11 21:00:00 ART 2010}]}

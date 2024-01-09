@@ -1,10 +1,9 @@
 package main.java.com.solvd.database.model;
 
-import jakarta.xml.bind.annotation.XmlAttribute;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.*;
 
 @XmlRootElement(name = "contactInformation")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class ContactInformation {
     private String email;
     private Long phoneNumber;

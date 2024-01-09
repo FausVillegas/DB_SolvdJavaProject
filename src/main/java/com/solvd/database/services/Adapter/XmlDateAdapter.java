@@ -3,10 +3,9 @@ package main.java.com.solvd.database.services.Adapter;
 import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.Date;
 
-public class DateAdapter extends XmlAdapter<String, Date> {
+public class XmlDateAdapter extends XmlAdapter<String, Date> {
 
     private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 

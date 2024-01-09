@@ -1,28 +1,32 @@
 package main.java.com.solvd.database.model;
 
-import jakarta.xml.bind.annotation.XmlAttribute;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlElementWrapper;
-import jakarta.xml.bind.annotation.XmlRootElement;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.xml.bind.annotation.*;
 import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import main.java.com.solvd.database.services.Adapter.DateAdapter;
-import main.java.com.solvd.database.services.jaxb.JaxB;
+import main.java.com.solvd.database.services.Adapter.XmlDateAdapter;
 
 import java.util.Date;
-import java.time.LocalDate;
 import java.util.List;
 
 @XmlRootElement(name = "user")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class User {
+    @JsonProperty
     @XmlAttribute(name="id")
     private int ID;
+    @JsonProperty
     private String firstName;
+    @JsonProperty
     private String lastName;
+    @JsonProperty
     private int age;
-    @XmlJavaTypeAdapter(DateAdapter.class)
+    @JsonProperty
+    @XmlJavaTypeAdapter(XmlDateAdapter.class)
     @XmlElement(name = "hireDate")
     private Date hd;
+    @JsonProperty
     private ContactInformation contactInformation;
+    @JsonProperty
     @XmlElementWrapper(name = "phones")
     @XmlElement(name = "phone")
     private List<Phone> phoneList;

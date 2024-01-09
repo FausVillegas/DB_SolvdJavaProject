@@ -1,5 +1,6 @@
 package main.java.com.solvd.database;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mysql.cj.xdevapi.SessionFactory;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
@@ -62,10 +63,13 @@ public class Main {
 
         // -------------XML-------------
         //DOM
-//        DomParser.usersXml();
+        LOGGER.info("-----------DOM-----------");
+        DomParser.usersXml();
 
         //Jaxb
-        File file = new File("src/main/resources/users.xml");
+        LOGGER.info("-----------JAXB-----------");
+        File xmlFile = new File("src/main/resources/users.xml");
+        File jsonFile = new File("src/main/resources/users.json");
 
 //        try {
 //            JAXBContext context = JAXBContext.newInstance(Users.class);
@@ -77,10 +81,20 @@ public class Main {
 //        }
 
         try {
-            LOGGER.info(JaxB.unmarshal(file));
+            LOGGER.info(JaxB.unmarshal(xmlFile));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
 
+        //------------JSON-------------
+        //Jackson
+        LOGGER.info("-----------JACKSON-----------");
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            Users users = mapper.readValue(jsonFile, Users.class);
+            LOGGER.info(users);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
