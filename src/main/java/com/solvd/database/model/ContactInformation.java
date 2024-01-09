@@ -1,10 +1,16 @@
 package main.java.com.solvd.database.model;
 
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "contactInformation")
 public class ContactInformation {
-    String email;
-    Long phoneNumber;
-    int userId;
-    int id;
+    private String email;
+    private Long phoneNumber;
+    private int userId;
+    @XmlAttribute(name="id")
+    private int ID;
 
     public String getEmail() {
         return email;
@@ -31,11 +37,11 @@ public class ContactInformation {
     }
 
     public int getId() {
-        return id;
+        return ID;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.ID = id;
     }
 
     @Override
@@ -43,8 +49,7 @@ public class ContactInformation {
         return "ContactInformation{" +
                 "email='" + email + '\'' +
                 ", phoneNumber=" + phoneNumber +
-                ", userId=" + userId +
-                ", id=" + id +
+                ", id=" + ID +
                 '}';
     }
 }

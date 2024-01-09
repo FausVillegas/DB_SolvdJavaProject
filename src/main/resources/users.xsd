@@ -5,12 +5,13 @@
     <xs:element name="users">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="user">
+                <xs:element maxOccurs="unbounded" name="user">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="name" type="xs:string" />
+                            <xs:element name="firstName" type="xs:string" />
                             <xs:element name="lastName" type="xs:string" />
                             <xs:element name="age" type="xs:int" />
+                            <xs:element name="hireDate"/>
                             <xs:element name="contactInformation">
                                 <xs:complexType>
                                     <xs:sequence>
@@ -23,7 +24,7 @@
                             <xs:element name="phones">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="phone">
+                                        <xs:element maxOccurs="unbounded" name="phone">
                                             <xs:complexType>
                                                 <xs:sequence>
                                                     <xs:element name="brand" type="xs:string" />

@@ -1,0 +1,29 @@
+2024-01-06 20:50:02,575 INFO m.j.c.s.d.s.d.DomParser [main] User 1: name=Fausto
+2024-01-06 20:50:02,583 INFO m.j.c.s.d.s.d.DomParser [main] User 1: lastName=Villegas
+2024-01-06 20:50:02,583 INFO m.j.c.s.d.s.d.DomParser [main] User 1: age=19
+2024-01-06 20:50:02,584 INFO m.j.c.s.d.s.d.DomParser [main] User 1: contactInformation=
+            faustovillegas2015@gmail.com
+            2222222222
+        
+2024-01-06 20:50:02,586 INFO m.j.c.s.d.s.d.DomParser [main] User 1: phones=
+            
+                Samsung
+                S22
+                
+                    Android 13
+                
+                
+                    5500
+                
+            
+            
+                Samsung
+                S21
+                
+                    Android 13
+                
+                
+                    4400
+                
+            
+        

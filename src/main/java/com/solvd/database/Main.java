@@ -1,6 +1,9 @@
 package main.java.com.solvd.database;
 
 import com.mysql.cj.xdevapi.SessionFactory;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Unmarshaller;
 import main.java.com.solvd.database.dao.IContactInformationDao;
 import main.java.com.solvd.database.dao.IOperatingSystemsDao;
 import main.java.com.solvd.database.model.ContactInformation;
@@ -10,8 +13,10 @@ import main.java.com.solvd.database.dao.IUserDao;
 import main.java.com.solvd.database.dao.jdbc.ContactInformationDAO;
 import main.java.com.solvd.database.dao.jdbc.OperatingSystemDAO;
 import main.java.com.solvd.database.dao.jdbc.UserDAO;
+import main.java.com.solvd.database.model.Users;
 import main.java.com.solvd.database.services.PrintService;
 import main.java.com.solvd.database.services.dom.DomParser;
+import main.java.com.solvd.database.services.jaxb.JaxB;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -57,6 +62,25 @@ public class Main {
 
         // -------------XML-------------
         //DOM
-        DomParser.usersXml();
+//        DomParser.usersXml();
+
+        //Jaxb
+        File file = new File("src/main/resources/users.xml");
+
+//        try {
+//            JAXBContext context = JAXBContext.newInstance(Users.class);
+//            Unmarshaller unmarshaller = context.createUnmarshaller();
+//            Users users = (Users) unmarshaller.unmarshal(file);
+//            LOGGER.info("");
+//        } catch (JAXBException e) {
+//            throw new RuntimeException(e);
+//        }
+
+        try {
+            LOGGER.info(JaxB.unmarshal(file));
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }
