@@ -1,0 +1,4 @@
+2024-01-13 12:53:47,896 INFO m.j.c.s.d.Main [main] -----------JAXB-----------
+2024-01-13 12:53:48,595 INFO m.j.c.s.d.Main [main] Users{usersList=[
+ User{ID=3, firstName='Manuel', lastName='Lopez', age=24, contactInformation=ContactInformation{email='manuellopez@gmail.com', phoneNumber=2222222, id=1}, phoneList=[Phone{ID=1, brand='Samsung', model='S23', operatingSystem=OperatingSystem{name='Android 13', id=1}, battery=Battery{id=1, capacityMah=5500.0}}], hireDate=Mon May 01 00:00:00 ART 3911}]}
+2024-01-13 12:53:48,596 INFO m.j.c.s.d.Main [main] -----------JACKSON-----------

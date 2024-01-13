@@ -10,6 +10,13 @@ public class OperatingSystem {
     @XmlAttribute(name="id")
     int ID;
 
+    public OperatingSystem() {}
+
+    public OperatingSystem(String name, int ID) {
+        this.name = name;
+        this.ID = ID;
+    }
+
     public String getName() {
         return name;
     }

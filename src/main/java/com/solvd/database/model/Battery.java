@@ -10,6 +10,13 @@ public class Battery {
     private int id;
     private float capacityMah;
 
+    public Battery() {}
+
+    public Battery(int id, float capacityMah) {
+        this.id = id;
+        this.capacityMah = capacityMah;
+    }
+
     public int getId() {
         return id;
     }

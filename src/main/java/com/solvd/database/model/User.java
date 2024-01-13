@@ -31,6 +31,21 @@ public class User {
     @XmlElement(name = "phone")
     private List<Phone> phoneList;
 
+    public User(){}
+
+    public User(int ID, String firstName, String lastName, int age, Date hd) {
+        this.ID = ID;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.hd = hd;
+    }
+
+    public User(int ID, String firstName, String lastName, int age, Date hd, ContactInformation contactInformation, List<Phone> phoneList) {
+        this(ID,firstName,lastName,age,hd);
+        this.contactInformation = contactInformation;
+        this.phoneList = phoneList;
+    }
 
     public Date getHireDate() {
         return hd;

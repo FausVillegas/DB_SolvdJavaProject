@@ -5,16 +5,15 @@ import com.mysql.cj.xdevapi.SessionFactory;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Unmarshaller;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import main.java.com.solvd.database.dao.IContactInformationDao;
 import main.java.com.solvd.database.dao.IOperatingSystemsDao;
-import main.java.com.solvd.database.model.ContactInformation;
-import main.java.com.solvd.database.model.OperatingSystem;
-import main.java.com.solvd.database.model.User;
+import main.java.com.solvd.database.model.*;
 import main.java.com.solvd.database.dao.IUserDao;
 import main.java.com.solvd.database.dao.jdbc.ContactInformationDAO;
 import main.java.com.solvd.database.dao.jdbc.OperatingSystemDAO;
 import main.java.com.solvd.database.dao.jdbc.UserDAO;
-import main.java.com.solvd.database.model.Users;
+import main.java.com.solvd.database.services.Adapter.XmlDateAdapter;
 import main.java.com.solvd.database.services.PrintService;
 import main.java.com.solvd.database.services.dom.DomParser;
 import main.java.com.solvd.database.services.jaxb.JaxB;
@@ -29,8 +28,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
 import java.util.stream.Stream;
 
 public class Main {
@@ -63,8 +61,8 @@ public class Main {
 
         // -------------XML-------------
         //DOM
-        LOGGER.info("-----------DOM-----------");
-        DomParser.usersXml();
+//        LOGGER.info("-----------DOM-----------");
+//        DomParser.usersXml();
 
         //Jaxb
         LOGGER.info("-----------JAXB-----------");
@@ -80,19 +78,41 @@ public class Main {
 //            throw new RuntimeException(e);
 //        }
 
-        try {
-            LOGGER.info(JaxB.unmarshal(xmlFile));
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+
+        Users users = new Users();
+
+
+//        user.setId(3);
+//        user.setFirstName("Manuel");
+//        user.setLastName("Lopez");
+//        user.setAge(24);
+//        Date date = new Date(2011, Calendar.MAY,1,0,0);
+//        user.setHireDate(date);
+
+        Date date = new Date(2011, Calendar.MAY,1,0,0);
+        Phone phone = new Phone(1,"Samsung","S23",new OperatingSystem("Android 13",1),new Battery(1,5500));
+        List<Phone> phoneList = new ArrayList<>();
+        phoneList.add(phone);
+        User user = new User(3,"Manuel","Lopez",24,date,new ContactInformation("manuellopez@gmail.com",2222222L,3,1),phoneList);
+        List<User> usersList = new ArrayList<>();
+        usersList.add(user);
+        users.setUsers(usersList);
+
+//        try {
+//            JaxB.marshall(users,xmlFile);
+//            LOGGER.info(JaxB.unmarshal(xmlFile));
+//        } catch (Exception e) {
+//            throw new RuntimeException(e);
+//        }
 
         //------------JSON-------------
         //Jackson
         LOGGER.info("-----------JACKSON-----------");
         ObjectMapper mapper = new ObjectMapper();
         try {
-            Users users = mapper.readValue(jsonFile, Users.class);
-            LOGGER.info(users);
+            mapper.writeValue(jsonFile,users);
+            Users usersJson = mapper.readValue(jsonFile, Users.class);
+            LOGGER.info(usersJson);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

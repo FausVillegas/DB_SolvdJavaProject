@@ -11,6 +11,14 @@ public class ContactInformation {
     @XmlAttribute(name="id")
     private int ID;
 
+    public ContactInformation() {}
+    public ContactInformation(String email, Long phoneNumber, int userId, int ID) {
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.userId = userId;
+        this.ID = ID;
+    }
+
     public String getEmail() {
         return email;
     }

@@ -15,6 +15,16 @@ public class Phone {
     private OperatingSystem operatingSystem;
     private Battery battery;
 
+    public Phone() {}
+
+    public Phone(int ID, String brand, String model, OperatingSystem operatingSystem, Battery battery) {
+        this.ID = ID;
+        this.brand = brand;
+        this.model = model;
+        this.operatingSystem = operatingSystem;
+        this.battery = battery;
+    }
+
     public int getId() {
         return ID;
     }
