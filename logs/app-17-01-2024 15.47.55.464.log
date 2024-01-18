@@ -1,0 +1,5 @@
+2024-01-17 15:47:56,785 INFO m.j.c.s.d.ConnectionPool [main] java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+2024-01-17 15:47:56,832 INFO m.j.c.s.d.ConnectionPool [main] java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+2024-01-17 15:47:56,872 INFO m.j.c.s.d.ConnectionPool [main] java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+2024-01-17 15:47:56,908 INFO m.j.c.s.d.ConnectionPool [main] java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+2024-01-17 15:47:56,940 INFO m.j.c.s.d.ConnectionPool [main] java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)

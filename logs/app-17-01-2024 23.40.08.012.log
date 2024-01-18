@@ -1,0 +1,7 @@
+2024-01-17 23:40:09,850 INFO m.j.c.s.d.s.d.l.UserListener [main] Collect user info
+2024-01-17 23:40:09,859 INFO m.j.c.s.d.s.d.l.UserListener [main] Delete user info
+2024-01-17 23:40:09,868 INFO m.j.c.s.d.Main [main] Name: Juan Lopez Age: 28
+2024-01-17 23:40:09,877 INFO m.j.c.s.d.Main [main] Name: Juan Lopez Age: 28 (Customer)
+2024-01-17 23:40:09,878 INFO m.j.c.s.d.Main [main] Name: Matias Perez Age: 20 (Administrator)
+2024-01-17 23:40:09,910 INFO m.j.c.s.d.s.d.m.PhoneView [main] Phone{ID=1, brand='Samsung', model='S23', operatingSystem=OperatingSystem{name='Android 13', id=1}, battery=Battery{id=1, capacityMah=5500.0}}
+2024-01-17 23:40:09,912 INFO m.j.c.s.d.s.d.m.PhoneView [main] Phone{ID=1, brand='Samsung', model='S24', operatingSystem=OperatingSystem{name='Android 13', id=1}, battery=Battery{id=1, capacityMah=5500.0}}

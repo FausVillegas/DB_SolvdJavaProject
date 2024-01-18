@@ -3,14 +3,15 @@ package main.java.com.solvd.database.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.xml.bind.annotation.*;
 import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import main.java.com.solvd.database.services.Adapter.XmlDateAdapter;
+import main.java.com.solvd.database.interfaces.IUserInfo;
+import main.java.com.solvd.database.services.designpatterns.adapter.XmlDateAdapter;
 
 import java.util.Date;
 import java.util.List;
 
 @XmlRootElement(name = "user")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class User {
+public class User implements IUserInfo {
     @JsonProperty
     @XmlAttribute(name="id")
     private int ID;
@@ -30,22 +31,6 @@ public class User {
     @XmlElementWrapper(name = "phones")
     @XmlElement(name = "phone")
     private List<Phone> phoneList;
-
-    public User(){}
-
-    public User(int ID, String firstName, String lastName, int age, Date hd) {
-        this.ID = ID;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-        this.hd = hd;
-    }
-
-    public User(int ID, String firstName, String lastName, int age, Date hd, ContactInformation contactInformation, List<Phone> phoneList) {
-        this(ID,firstName,lastName,age,hd);
-        this.contactInformation = contactInformation;
-        this.phoneList = phoneList;
-    }
 
     public Date getHireDate() {
         return hd;
@@ -104,6 +89,11 @@ public class User {
     }
 
     @Override
+    public String basicInformation() {
+        return "Name: "+ firstName + " " + lastName + " Age: " + age;
+    }
+
+    @Override
     public String toString() {
         return "\n User{" +
                 "ID=" + ID +
@@ -115,4 +105,49 @@ public class User {
                 ", hireDate=" + hd +
                 '}';
     }
+
+    public static Builder builder(){
+        return new Builder(new User());
+    }
+
+    public static class Builder{
+        private final User user;
+        public Builder(User user){
+            this.user = user;
+        }
+        public Builder id(int id){
+            user.ID = id;
+            return this;
+        }
+        public Builder firstName(String firstName){
+            user.firstName = firstName;
+            return this;
+        }
+        public Builder lastName(String lastName){
+            user.lastName = lastName;
+            return this;
+        }
+
+        public Builder age(int age){
+            user.age = age;
+            return this;
+        }
+        public Builder hireDate(Date hireDate){
+            user.hd = hireDate;
+            return this;
+        }
+        public Builder contactInformation(ContactInformation contactInformation){
+            user.contactInformation = contactInformation;
+            return this;
+        }
+        public Builder phoneList(List<Phone> phoneList){
+            user.phoneList = phoneList;
+            return this;
+        }
+
+        public User build(){
+            return user;
+        }
+    }
+
 }

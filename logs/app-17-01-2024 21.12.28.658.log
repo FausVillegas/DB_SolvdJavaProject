@@ -1,0 +1,12 @@
+2024-01-17 21:12:30,582 INFO m.j.c.s.d.ConnectionPool [main] java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+2024-01-17 21:12:30,648 INFO m.j.c.s.d.ConnectionPool [main] java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+2024-01-17 21:12:30,706 INFO m.j.c.s.d.ConnectionPool [main] java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+2024-01-17 21:12:30,767 INFO m.j.c.s.d.ConnectionPool [main] java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+2024-01-17 21:12:30,823 INFO m.j.c.s.d.ConnectionPool [main] java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+2024-01-17 21:12:30,834 INFO m.j.c.s.d.s.l.UserListener [main] Collect user info
+2024-01-17 21:12:30,836 INFO m.j.c.s.d.s.l.UserListener [main] Delete user info
+2024-01-17 21:12:30,851 INFO m.j.c.s.d.Main [main] Name: Juan Lopez Age: 28
+2024-01-17 21:12:30,857 INFO m.j.c.s.d.Main [main] Name: Juan Lopez Age: 28 (Customer)
+2024-01-17 21:12:30,859 INFO m.j.c.s.d.Main [main] Name: Matias Perez Age: 20 (Administrator)
+2024-01-17 21:12:30,893 INFO m.j.c.s.d.s.m.PhoneView [main] Phone{ID=1, brand='Samsung', model='S23', operatingSystem=OperatingSystem{name='Android 13', id=1}, battery=Battery{id=1, capacityMah=5500.0}}
+2024-01-17 21:12:30,894 INFO m.j.c.s.d.s.m.PhoneView [main] Phone{ID=1, brand='Samsung', model='S24', operatingSystem=OperatingSystem{name='Android 13', id=1}, battery=Battery{id=1, capacityMah=5500.0}}

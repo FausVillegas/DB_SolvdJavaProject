@@ -1,0 +1,2 @@
+2024-01-17 21:05:22,219 INFO m.j.c.s.d.s.m.PhoneView [main] Phone{ID=1, brand='Samsung', model='S23', operatingSystem=OperatingSystem{name='Android 13', id=1}, battery=Battery{id=1, capacityMah=5500.0}}
+2024-01-17 21:05:22,226 INFO m.j.c.s.d.s.m.PhoneView [main] Phone{ID=1, brand='Samsung', model='S24', operatingSystem=OperatingSystem{name='Android 13', id=1}, battery=Battery{id=1, capacityMah=5500.0}}

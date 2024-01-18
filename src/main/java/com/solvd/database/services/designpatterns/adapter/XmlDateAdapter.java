@@ -1,4 +1,4 @@
-package main.java.com.solvd.database.services.Adapter;
+package main.java.com.solvd.database.services.designpatterns.adapter;
 
 import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 
