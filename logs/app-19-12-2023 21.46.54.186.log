@@ -1,0 +1,11 @@
+2023-12-19 21:46:56,125 ERROR j.u.ArrayList$ArrayListSpliterator [main] User{firstName='Fausto', lastName='Villegas', age=19}
+2023-12-19 21:46:56,135 ERROR j.u.ArrayList$ArrayListSpliterator [main] User{firstName='Manuel', lastName='Raimondi', age=23}
+2023-12-19 21:46:56,137 ERROR j.u.ArrayList$ArrayListSpliterator [main] User{firstName='Bruno', lastName='Rodriguez', age=15}
+2023-12-19 21:46:56,138 ERROR j.u.ArrayList$ArrayListSpliterator [main] User{firstName='Matias', lastName='Lopez', age=35}
+2023-12-19 21:46:56,140 ERROR j.u.ArrayList$ArrayListSpliterator [main] User{firstName='Matias', lastName='Lopez', age=35}
+2023-12-19 21:46:56,163 ERROR j.u.ArrayList$ArrayListSpliterator [main] ContactInformation{email='faustovillegas@gmail.com', phoneNumber=11111}
+2023-12-19 21:46:56,164 ERROR j.u.ArrayList$ArrayListSpliterator [main] ContactInformation{email='manuelraimondi@gmail.com', phoneNumber=222222}
+2023-12-19 21:46:56,180 ERROR j.u.ArrayList$ArrayListSpliterator [main] OperatingSystem{name='Windows 10'}
+2023-12-19 21:46:56,180 ERROR j.u.ArrayList$ArrayListSpliterator [main] OperatingSystem{name='Android 12'}
+2023-12-19 21:46:56,181 ERROR j.u.ArrayList$ArrayListSpliterator [main] OperatingSystem{name='iOS 17'}
+2023-12-19 21:46:56,181 ERROR j.u.ArrayList$ArrayListSpliterator [main] OperatingSystem{name='Android 13'}
